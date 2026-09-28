@@ -1,0 +1,94 @@
+
+Baseline
+
+              precision    recall  f1-score   support
+
+    Home win      0.419     1.000     0.590       134
+        Draw      0.000     0.000     0.000        75
+    Away win      0.000     0.000     0.000       111
+
+    accuracy                          0.419       320
+   macro avg      0.140     0.333     0.197       320
+weighted avg      0.175     0.419     0.247       320
+
+Confusion matrix:
+          Predicted H  Predicted D  Predicted A
+Actual H          134            0            0
+Actual D           75            0            0
+Actual A          111            0            0
+
+
+LR_form
+
+              precision    recall  f1-score   support
+
+    Home win      0.480     0.791     0.597       134
+        Draw      0.000     0.000     0.000        75
+    Away win      0.505     0.450     0.476       111
+
+    accuracy                          0.487       320
+   macro avg      0.328     0.414     0.358       320
+weighted avg      0.376     0.487     0.415       320
+
+Confusion matrix:
+          Predicted H  Predicted D  Predicted A
+Actual H          106            0           28
+Actual D           54            0           21
+Actual A           61            0           50
+
+
+LR_form_goals
+
+              precision    recall  f1-score   support
+
+    Home win      0.464     0.761     0.576       134
+        Draw      0.000     0.000     0.000        75
+    Away win      0.490     0.441     0.464       111
+
+    accuracy                          0.472       320
+   macro avg      0.318     0.401     0.347       320
+weighted avg      0.364     0.472     0.402       320
+
+Confusion matrix:
+          Predicted H  Predicted D  Predicted A
+Actual H          102            0           32
+Actual D           56            0           19
+Actual A           62            0           49
+
+
+LR_all
+
+              precision    recall  f1-score   support
+
+    Home win      0.474     0.761     0.585       134
+        Draw      0.000     0.000     0.000        75
+    Away win      0.514     0.486     0.500       111
+
+    accuracy                          0.487       320
+   macro avg      0.330     0.416     0.362       320
+weighted avg      0.377     0.487     0.418       320
+
+Confusion matrix:
+          Predicted H  Predicted D  Predicted A
+Actual H          102            0           32
+Actual D           56            0           19
+Actual A           57            0           54
+
+
+Random_forest
+
+              precision    recall  f1-score   support
+
+    Home win      0.491     0.821     0.615       134
+        Draw      0.000     0.000     0.000        75
+    Away win      0.531     0.459     0.493       111
+
+    accuracy                          0.503       320
+   macro avg      0.341     0.427     0.369       320
+weighted avg      0.390     0.503     0.428       320
+
+Confusion matrix:
+          Predicted H  Predicted D  Predicted A
+Actual H          110            0           24
+Actual D           54            0           21
+Actual A           60            0           51

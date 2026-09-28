@@ -1,0 +1,15 @@
+HISTORICAL PRE-MATCH PREDICTION
+Match: Bournemouth vs Fulham
+Date: 2025-10-03
+Model: Logistic Regression
+Model training seasons: 2021-22 through 2024-25
+
+Bournemouth win: 57.4%
+Draw: 23.1%
+Fulham win: 19.5%
+
+Predicted outcome: Bournemouth win
+Actual outcome: Bournemouth win
+
+These are model estimates, not guaranteed outcomes.
+The actual outcome was not used as a prediction input.

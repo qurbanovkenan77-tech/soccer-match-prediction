@@ -1,0 +1,38 @@
+
+Baseline
+
+              precision    recall  f1-score   support
+
+    Home win      0.422     1.000     0.593       135
+        Draw      0.000     0.000     0.000        87
+    Away win      0.000     0.000     0.000        98
+
+    accuracy                          0.422       320
+   macro avg      0.141     0.333     0.198       320
+weighted avg      0.178     0.422     0.250       320
+
+
+Logistic_regression
+
+              precision    recall  f1-score   support
+
+    Home win      0.493     0.756     0.596       135
+        Draw      0.000     0.000     0.000        87
+    Away win      0.434     0.500     0.464        98
+
+    accuracy                          0.472       320
+   macro avg      0.309     0.419     0.354       320
+weighted avg      0.341     0.472     0.394       320
+
+
+Random_forest
+
+              precision    recall  f1-score   support
+
+    Home win      0.472     0.822     0.600       135
+        Draw      0.000     0.000     0.000        87
+    Away win      0.459     0.398     0.426        98
+
+    accuracy                          0.469       320
+   macro avg      0.310     0.407     0.342       320
+weighted avg      0.340     0.469     0.384       320
