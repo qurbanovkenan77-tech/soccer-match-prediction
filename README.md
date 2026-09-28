@@ -254,5 +254,7 @@ The model-selection recommendation and much of the implementation
 were AI-assisted. The reported results came from running the code
 on the downloaded data, rather than from invented examples.
 
-AI conversation link or attached transcript:
+AI conversation link:
 https://chatgpt.com/share/6abaad40-fcdc-83e9-a23d-34e4d10832ea
+
+Initial prompt which can not be opened in this link has been added to main with name Initial_prompt_txt
