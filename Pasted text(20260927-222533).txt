@@ -1,0 +1,370 @@
+I need help completing a university mini-project for a data science/analytics class.
+
+My assignment is to build my own analytical framework for predicting a sports game. I chose SOCCER.
+
+The professor specifically said:
+- Show your own mindset/logic. This is what the assignment will mainly be graded on.
+- There are no limits on data, models, methods, logic, or analytical tools.
+- If AI is used, I need to announce it and attach the AI dialogue/link.
+- This project could later be expanded into my final project.
+
+I want to do the entire project in VS Code using Python.
+
+IMPORTANT:
+I do NOT want an unnecessarily complicated machine learning project. I want something that a graduate data science student could realistically create and explain. The goal should be a strong analytical framework and clear reasoning rather than using the most advanced model possible.
+
+PROJECT IDEA:
+
+Create a soccer match prediction system that predicts:
+
+Home Win / Draw / Away Win
+
+I want to use historical match data and build features that logically influence the result of a soccer match.
+
+Possible features could include:
+
+- Home team recent form
+- Away team recent form
+- Goals scored in recent matches
+- Goals conceded in recent matches
+- Home performance
+- Away performance
+- League position or points
+- Goal difference
+- Head-to-head history if useful
+- Win rate over the previous 5 matches
+- Average goals scored over the previous 5 matches
+- Average goals conceded over the previous 5 matches
+
+You do NOT have to use all of these. Help me decide which ones make sense and explain WHY.
+
+One important rule:
+When creating features for a match, only use information that would have been available BEFORE that match. I do not want data leakage.
+
+I would like to start with ONE league so that the project stays manageable. Premier League is probably easiest because data is widely available, but if you think another league or dataset is significantly easier, explain why.
+
+For the prediction models, I am thinking about comparing:
+
+1. A simple baseline
+2. Logistic Regression
+3. Random Forest
+
+Do not add a large number of models just to make the project look advanced. If these models are enough, use them.
+
+I want the project to answer something similar to:
+
+"Can recent team performance and basic match statistics be used to predict the outcome of a soccer match?"
+
+But help me improve the research question if necessary.
+
+I NEED YOU TO WALK ME THROUGH THE ENTIRE PROJECT FROM ZERO.
+
+Assume I have VS Code but have not created anything yet.
+
+Please work with me step-by-step instead of dumping the entire project at once.
+
+PHASE 1 — PROJECT DESIGN
+
+Before writing code, explain:
+
+1. What exactly we are predicting.
+2. What our research question is.
+3. What data we need.
+4. Where we can realistically get the data.
+5. What seasons we should use.
+6. What features we should create.
+7. Why each feature could theoretically help predict a soccer match.
+8. Which models we will compare.
+9. How we should evaluate the models.
+10. What our overall analytical framework will look like.
+
+I especially want a section called:
+
+"My Logic / Analytical Framework"
+
+This should explain the reasoning behind the project in plain student language.
+
+For example:
+
+Soccer teams that are performing well recently may be more likely to perform well in their next match. However, performance should not only be measured through wins and losses. Goals scored, goals conceded, whether the team is playing at home, and recent form can provide additional information. Therefore, I want to combine these factors into features and test whether they help predict match outcomes.
+
+Do NOT just copy that paragraph. Help me develop this logic naturally.
+
+PHASE 2 — VS CODE SETUP
+
+Walk me through exactly what to do in VS Code.
+
+Tell me:
+
+- what folder to create
+- what files to create
+- how to create a Python virtual environment
+- what packages to install
+- the exact terminal commands
+- what each command does
+
+Use a clean structure similar to:
+
+soccer-match-prediction/
+│
+├── data/
+├── notebooks/
+├── src/
+├── results/
+├── README.md
+├── requirements.txt
+└── main.py
+
+If a simpler structure makes more sense for this assignment, tell me.
+
+PHASE 3 — DATA
+
+Help me find a REAL publicly available soccer dataset.
+
+I do not want fake or manually generated data.
+
+Prefer something easy to download such as:
+
+- football-data.co.uk
+- Kaggle
+- another reliable public source
+
+Tell me exactly:
+- what file to download
+- what seasons to download
+- where to save them
+- what important columns we need
+
+Then help me load and inspect the dataset with Python.
+
+PHASE 4 — DATA CLEANING
+
+Write simple, readable Python code to:
+
+- load the data
+- combine seasons if needed
+- select useful columns
+- handle missing values
+- convert dates
+- inspect the dataset
+- check for problems
+
+Explain each major step.
+
+Do not write unnecessarily complex code.
+
+PHASE 5 — FEATURE ENGINEERING
+
+This is one of the most important parts of my project.
+
+Help me create features using ONLY matches that occurred before the match being predicted.
+
+Examples:
+
+home_recent_points
+away_recent_points
+home_recent_goals_scored
+away_recent_goals_scored
+home_recent_goals_conceded
+away_recent_goals_conceded
+home_win_rate_last5
+away_win_rate_last5
+home_goal_difference_last5
+away_goal_difference_last5
+
+We may also include a home advantage indicator if useful.
+
+For each feature:
+1. Explain what it represents.
+2. Explain why it could predict match outcome.
+3. Make sure there is no data leakage.
+
+Keep the feature engineering understandable enough that I could explain it to my professor.
+
+PHASE 6 — EXPLORATORY DATA ANALYSIS
+
+Help me create a small number of useful visualizations.
+
+Do NOT create graphs just for decoration.
+
+Possible questions:
+
+- How often do home teams win?
+- Does stronger recent form relate to winning?
+- Do teams scoring more goals recently win more often?
+- How common are draws?
+- Is there visible home-field advantage?
+
+Use Python with pandas and matplotlib.
+
+For every graph, explain:
+
+"What does this graph tell us and why does it matter for our prediction framework?"
+
+PHASE 7 — MODELING
+
+Create a train/test split correctly.
+
+IMPORTANT:
+Because this is time-based sports data, do NOT randomly shuffle future games into the training set if that would create unrealistic evaluation.
+
+Prefer something such as:
+
+older seasons = training
+newest season = testing
+
+Explain why.
+
+Create:
+
+MODEL 0 — BASELINE
+
+Create a simple baseline prediction so we know whether machine learning actually improves anything.
+
+For example:
+predict the most common match outcome.
+
+Then:
+
+MODEL 1 — LOGISTIC REGRESSION
+
+Explain:
+- why we are using it
+- what it does in simple language
+- how it handles three classes
+
+Then:
+
+MODEL 2 — RANDOM FOREST
+
+Explain:
+- why we are trying it
+- how it differs from Logistic Regression
+- why nonlinear relationships could matter in soccer
+
+PHASE 8 — EVALUATION
+
+Evaluate the models using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 score
+- Confusion matrix
+
+If appropriate, also use log loss because predicted probabilities can be important for soccer predictions.
+
+Explain what each metric means in normal language.
+
+Do NOT just say one model is "better" because accuracy is higher.
+
+Help me interpret:
+- which outcomes are easiest to predict
+- which outcomes are hardest
+- whether draws are difficult to predict
+- whether the model improves over the baseline
+- what the confusion matrix tells us
+
+PHASE 9 — FEATURE IMPORTANCE / INTERPRETATION
+
+Help me investigate what the models learned.
+
+For Logistic Regression, show useful coefficient interpretation if appropriate.
+
+For Random Forest, show feature importance.
+
+Then help me answer questions such as:
+
+- Does recent form matter?
+- Does home advantage matter?
+- Are attacking statistics more useful than defensive statistics?
+- Which features appear most useful?
+
+Do not make causal claims. These are predictive relationships, not proof that one variable causes another.
+
+PHASE 10 — PREDICT AN ACTUAL MATCH
+
+After the model works, show me how to use it to make a prediction for a match using the available data.
+
+Output something like:
+
+Team A Win: 45%
+Draw: 27%
+Team B Win: 28%
+
+Explain that these are model probabilities and not guaranteed outcomes.
+
+PHASE 11 — FINAL ANALYSIS
+
+Help me write a student-style analysis explaining:
+
+1. Research question
+2. My analytical logic
+3. Dataset
+4. Feature engineering
+5. Models
+6. Results
+7. What I learned
+8. Limitations
+9. Possible future improvements
+
+Some important limitations could include:
+
+- Soccer contains randomness.
+- Injuries may not be included.
+- Starting lineups may not be included.
+- Transfers can change team strength.
+- Recent form is only one measure of strength.
+- Red cards and unusual events affect individual matches.
+- Historical performance does not guarantee future performance.
+
+PHASE 12 — FINAL PROJECT STRUCTURE
+
+At the end, help me organize everything so I can submit it.
+
+I want:
+
+- working Python code
+- dataset/data instructions
+- graphs
+- model evaluation
+- README.md
+- requirements.txt
+- written explanation of my methodology
+- final results
+- AI-use disclosure
+
+Help me make a professional but student-level README explaining how to run the project.
+
+Also tell me what files I should submit to Canvas.
+
+AI DISCLOSURE:
+
+Since my professor requires me to announce AI usage, help me write a short honest statement such as:
+
+"I used ChatGPT as a support tool during this project to help brainstorm the analytical framework, troubleshoot Python code, and clarify modeling concepts. I reviewed, modified, and tested the code and made the final analytical decisions myself."
+
+We can adjust that based on how I actually use AI.
+
+IMPORTANT STYLE INSTRUCTIONS:
+
+- Talk to me like you are helping a student complete the assignment.
+- Do not make the project unnecessarily complicated.
+- Explain WHY we make each analytical decision.
+- Give me code that I can actually run in VS Code.
+- Give me exact terminal commands when necessary.
+- Tell me where every piece of code should go.
+- When you give code, explain what it does afterward.
+- Do not skip steps.
+- Do not assume something worked. Ask me to show you the output when we reach important checkpoints.
+- If I get an error, help me debug it before moving forward.
+- Keep track of what we have already completed.
+- Do not invent model results.
+- Do not invent dataset statistics.
+- Only discuss results after I actually run the code and give you the output.
+- Keep the writing natural and student-like, not overly formal or AI-sounding.
+- The professor mainly cares about my OWN reasoning, so regularly ask me what decisions I want to make and help me explain those decisions in my own words.
+
+Start ONLY with PHASE 1: PROJECT DESIGN.
+
+Do not give me any Python code yet.
